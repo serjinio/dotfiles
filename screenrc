@@ -1,0 +1,29 @@
+# some default settings
+vbell off
+defscrollback 30000
+
+# Monitor windows
+defmonitor on
+activity ""
+
+# Look and feel
+caption always "%{= bb}%{+b w}Screen: %n | %h %=%t %c"
+hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+# Our warning of activity
+activity "Activity in %t(%n)"
+
+# Rebind escape key to Control-q so that Emacs shurtcuts won't be affected
+escape ^\\
+
+# Define some useful shortcuts
+bindkey -k k2 screen                                    # F2  | Create new window
+bindkey -k k3 prev                                      # F3  | Previous Window
+bindkey -k k4 next                                      # F4  | Next Window
+register r "^a:source $HOME/.screenrc^M"                #     | Goes with F5 definition
+bindkey -k k5 process r                                 # F5  | Reload profile
+bindkey -k k6 detach                                    # F6  | Detach from this session
+bindkey -k k7 copy                                      # F7  | Enter copy/scrollback mode
+register t "^aA^aa^k^h"                                 #     | Goes with the F8 definition
+bindkey -k k8 process t
+
