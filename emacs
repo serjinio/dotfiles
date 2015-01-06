@@ -48,6 +48,10 @@
 (setq undo-limit 100000)
 (put 'narrow-to-region  'disabled nil)
 
+(if (fboundp 'ace-jump-mode)
+    (progn
+      (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+      (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)))
 
 ;; aliases for useful functions
 
