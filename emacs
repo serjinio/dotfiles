@@ -30,16 +30,13 @@
 ;;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 
-;; load-theme
-(load-theme 'deeper-blue)
-
-
 ;; minor modes & various options
 (show-paren-mode t)
 (column-number-mode t)
-(global-hl-line-mode t) 
+(global-hl-line-mode nil) 
 (blink-cursor-mode 0)
 (icomplete-mode t)
+(global-font-lock-mode t)
 
 (setq show-paren-style 'expression)
 (setq read-buffer-completion-ignore-case 't)
@@ -112,6 +109,13 @@
 	  mac-command-key-is-meta t
 	  mac-command-modifier 'meta
 	  mac-option-modifier 'none))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Themes
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load-theme 'deeper-blue)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
